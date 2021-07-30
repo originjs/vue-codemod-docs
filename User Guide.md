@@ -113,7 +113,7 @@ npx vue-codemod src -t new-global-api
 
 `src` represents the path of file/folder that needs to be transformed. `-t new-global-api` represents only executing one rule called  `new-global-api` .
 
-[Here](#Rule List) is the complete rule list.
+[Here](#Rule-List) is the complete rule list.
 
 #### Output Format
 
