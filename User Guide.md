@@ -16,7 +16,7 @@
 
 `vue-codemod` is a Vue 2 to Vue 3 migration tool, which can upgrade most of Vue 2 patterns to Vue 3 directly. With `vue-codemod` transformation and some simple manual upgrade, we can finish the whole process of migration perfectly.
 
-> ⚠️Attention: Since the [`vue-codemod`](https://github.com/vuejs/vue-codemod) from Vue.js team has not been maintained for a long while, the repo below is forked from Vue.js team. We are developing new features in the fork repo.
+> ⚠️Attention: Since the [`vue-codemod`](https://github.com/vuejs/vue-codemod) from Vue.js team has not been maintained for some time, the following repo is forked from Vue.js team. We are continuing to develop new features in the fork repo.
 
 *Repository URL*: https://github.com/originjs/vue-codemod
 
