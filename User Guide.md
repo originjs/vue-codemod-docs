@@ -14,7 +14,7 @@
 
 ## Introduction
 
-`vue-codemod` is a Vue 2 to Vue 3 migration tool, which can upgrade most of Vue 2 patterns to Vue 3 directly. With `vue-codemod` transformation and some simple manual upgrade, we can finish the whole process of migration perfectly.
+`vue-codemod` is a Vue 2 to Vue 3 migration tool, which can directly upgrade most of the Vue 2 syntax to Vue 3 syntax. With `vue-codemod` transformation and a small amount of manual modification, users can complete the smooth migration from Vue 2 to Vue 3.
 
 > ⚠️Attention: Since the [`vue-codemod`](https://github.com/vuejs/vue-codemod) from Vue.js team has not been maintained for some time, the following repo is forked from Vue.js team. We are continuing to develop new features in the fork repo.
 
@@ -24,9 +24,9 @@
 
 > ![equ](https://latex.codecogs.com/gif.latex?TransformationRates=\frac{AutoUpgraded}{(ManuallyUpgraded+AutoUpgraded)})
 >
-> **Manually Upgraded**: The number of patterns require manually upgrade
+> **Manually Upgraded**: Number of patterns require manually upgrade
 >
-> **Auto Upgraded**: The number of patterns upgraded by `vue-codemod`
+> **Auto Upgraded**: Number of patterns upgraded by `vue-codemod`
 
 | No. | Project                                                   | Manually Upgraded | Auto Upgraded | Transformation Rates |
 | :--: | :----------------------------------------------------------- | :--------- | -------- | :------ |
@@ -93,9 +93,9 @@ yarn global add .
 npx vue-codemod <path> -t/-a [transformation params][...additional options]
 ```
 
-1. `<path>` represents the file/folder that needs to be transformed.
-2. `-a` represents executing all rules.
-3. `-t`  represents executing one specific rule (Conflicts with `-a`). When using `-t`, argument is required. 
+1. `<path>` indicates the path of execution, which can be files and folders
+2. `-a` means executing all rules.
+3. `-t` means executing one specific rule (Conflicts with `-a`). When `-t` is used, parameter is required. 
 
 #### Execute All Rules
 
@@ -103,7 +103,7 @@ npx vue-codemod <path> -t/-a [transformation params][...additional options]
 npx vue-codemod src -a
 ```
 
-`src` represents the path of file/folder that needs to be transformed. `-a` represents executing all rules.
+`src` indicates the path of execution. `-a` means executing all rules.
 
 #### Execute Specific Rule
 
@@ -111,9 +111,9 @@ npx vue-codemod src -a
 npx vue-codemod src -t new-global-api
 ```
 
-`src` represents the path of file/folder that needs to be transformed. `-t new-global-api` represents only executing one rule called  `new-global-api` .
+`src` indicates the path of execution. `-t new-global-api` means only executing the rule of `new-global-api` .
 
-[Here](#Rule-List) is the complete rule list.
+[Here](#Rule-List) is the detailed rule list.
 
 #### Output Format
 
@@ -121,15 +121,15 @@ npx vue-codemod src -t new-global-api
 npx vue-codemod src -a -f log
 ```
 
-Users can declare `-f` option to stylish the output format, which contains `table`, `detail`,`log` as arguments. The default argument is `table`.
+The `-f` option is used to specify the output format. The optional parameters are `table`, `detail`,`log`. If no parameters are specified, the default is `table`.
 
->  `table` : print executed rules as a table
+>  `table` : output the executed rules as a table
 >
 > `detail` : list transformed files for each rule
 >
->  `log` : create a log file with output report
+>  `log` : output a report in the form of log file
 
-Here is the output sample of `-f table`
+Here is a sample output of `-f table`:
 
 ```bash
 ╔═══════════════════════════════╤═══════╗
@@ -158,7 +158,9 @@ Here is the output sample of `-f table`
 
 #### Manual Migration Guide
 
-`vue-codemod`  will detect the patterns that need to be upgraded manually and print to the console (will create a log file if  `-f log` argument is declared). Here is the example: 
+During the operation of `vue-codemod`, the patterns that need to be manually upgraded will be identified and printed to the console as an object (will create a log file if  `-f log` is declared). For more details, please refer to [Manual Migration Guide](Manual%20Migration%20Guide.md).
+
+Here is the example: 
 
 ```null
 The list that you need to migrate your codes mannually:
